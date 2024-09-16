@@ -69,11 +69,11 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'pereval',
-        'USER': 'postgres',
-        'PASSWORD': 'EmiPost14',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': 'FSTR_NAME',
+        'USER': 'FSTR_LOGIN',
+        'PASSWORD': 'FSTR_PASS',
+        'HOST': 'FSTR_DB_HOST',
+        'PORT': 'FSTR_DB_PORT',
     }
 }
 
