@@ -12,7 +12,7 @@ class Users(models.Model):
 
 class Coords(models.Model):
     latitude = models.FloatField()
-    longitude = models.FloatField()  # Исправлено название
+    longitude = models.FloatField()
     height = models.FloatField()
 
     def __str__(self):
@@ -41,7 +41,7 @@ class PerevalAdded(models.Model):
 class PerevalImage(models.Model):
     pereval = models.ForeignKey(PerevalAdded, on_delete=models.CASCADE, related_name='images')
     date_added = models.DateTimeField(auto_now_add=True)
-    img = models.ImageField(upload_to='images/')  # Используйте ImageField для хранения изображений
+    img = models.ImageField(upload_to='images/')
     title = models.CharField(max_length=255)
 
     def __str__(self):
