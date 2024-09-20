@@ -29,7 +29,7 @@ class PerevalDataHandler:
     def add_pereval(title, coord, beauty_title=None, other_titles=None, connect=None,
                     level_winter=None, level_summer=None, level_autumn=None, level_spring=None):
         try:
-            if isinstance(coord, int):  # Если coord - это ID, а не объект
+            if isinstance(coord, int):
                 coord = Coords.objects.get(id=coord)
 
             pereval = PerevalAdded.objects.create(

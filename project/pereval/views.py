@@ -60,3 +60,30 @@ def get_perevals_by_user_email(request):
         return Response({"message": "User not found"}, status=status.HTTP_404_NOT_FOUND)
     except Exception as e:
         return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+@api_view(['GET'])
+def example_view(request):
+    """
+    Example:
+    Возвращает пример данных.
+
+    ---
+    parameters:
+      - name: id
+        description: Уникальный идентификатор
+        required: true
+        type: integer
+        paramType: path
+    responses:
+      200:
+        description: Успешный запрос.
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+              description: Сообщение.
+              example:  API ответ.
+    """
+    data = {"message": "Пример API ответа"}
+    return Response(data, status=status.HTTP_200_OK)
