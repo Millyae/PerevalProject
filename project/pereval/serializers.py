@@ -18,7 +18,7 @@ class PerevalImageSerializer(serializers.ModelSerializer):
 
 class PerevalAddedSerializer(serializers.ModelSerializer):
     coord = CoordsSerializer()
-    images = PerevalImageSerializer(many=True, read_only=True)  # Добавлено для отображения изображений
+    images = PerevalImageSerializer(many=True, read_only=True) 
 
     class Meta:
         model = PerevalAdded
